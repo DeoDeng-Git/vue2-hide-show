@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue2 hide and show content</title>
+</head>
+<body>
+
+	<h1>Vue2 hide and show</h1>
+
+	<p>Use onlick event to show and hide content when 'seen' is true or false.</p>
+	<p> 'seen' is default to 'true' so that the content will show when page is loaded, 
+		<br>if the content is too long, it's OK to set 'seen' as 'false' </p>
+	
+	<div id="app">
+	<button @click="seen=!seen"><span v-if="seen">Hide content</span><span v-else>Show content</span></button>
+	
+	<!-- ol>li*5>a{list item} -->
+		<ol v-show="seen">
+			<li><a href="#">list item</a></li>
+			<li><a href="#">list item</a></li>
+			<li><a href="#">list item</a></li>
+			<li><a href="#">list item</a></li>
+			<li><a href="#">list item</a></li>
+		</ol>
+
+	</div>
+
+
+	<script src="https://unpkg.com/vue/dist/vue.js"></script> 
+
+	<script>
+	    var app = new Vue({
+	        el: '#app',
+	        data: {
+	            seen: true,
+	        }
+
+	    })
+	</script>
+
+</body>
+</html>
