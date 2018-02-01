@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue-push</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container" id="app">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Vue Push</h1>
+        <p>list all the feature of the product</p>
+        <ul>
+          <li v-for="feature in features"> {{feature.name}} </li>
+          <li v-show="checked" class="bg-danger">New feature added</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h2>Check the box</h2>
+        <div class="form-group">
+          <label>Add new feature
+            <input type="checkbox" name="lifetime" v-model="checked">
+          </label>
+        </div>
+        <p>
+          note: need to push one <code>li</code> tag when checked the box
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script>
+  new Vue({
+    el: '#app',
+    data: {
+      features: [
+        { name: 'function 0' },
+        { name: 'function 1' },
+        { name: 'function 2' },
+        { name: 'function 3' },
+        { name: 'function 4' },
+        { name: 'function 5' },
+        { name: 'function 6' }
+      ],
+      checked: false
+    }
+  })
+  </script>
+</body>
+
+</html>
