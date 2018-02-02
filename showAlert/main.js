@@ -15,7 +15,7 @@ var vm = new Vue({
     		this.alertInfo('alert-success', 'Success!!!!')
     	},
     	showAlertD: function(){
-    		this.alertInfo('alert-danger', 'danger!!!!')
+    		this.alertInfo('alert-danger', 'Danger!!!!')
 
     	}
     }
