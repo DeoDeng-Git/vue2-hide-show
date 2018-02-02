@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue loop class</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head> 
+<body>
+    <div class="container" id="app">
+        <h1 class="page-header text-primary">Vue loop class</h1>
+        <div class="well">
+            <p>The follows are different alter color in Bootstrap</p>
+            <ul>
+                <li v-for="color in colors" class="alter" :class="color "> {{color}} </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js"></script>
+</body>
+</html>
