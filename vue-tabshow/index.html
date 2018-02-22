@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vue-tabshow</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>vue-tabshow</h1>
+    <p>Click on a product to see details</p>
+    <div id="app">
+    	<span class="btn btn-link" v-for="product in products" @click="showDiv(product.id)" :key="product.id">{{product.name}} </span>
+
+      <div class="row">
+        <div v-for="x in output" class="col">
+          <div class="card">
+            <img :src="x.image" class="card-img-top" width="100%">
+            <div class="card-body">
+              <h4 class="card-title"> {{x.spec}} </h4>
+              <p> Price: {{x.price}} </p>
+              <a :href="x.link" class="btn btn-primary">Learn More </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
